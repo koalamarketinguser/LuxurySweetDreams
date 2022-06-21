@@ -1,0 +1,118 @@
+@import "./menus/account-menu.scss";
+@import "./menus/search-panel.scss";
+@import "./menus/mini-cart-panel.scss";
+@import "./menus/main-menu.scss";
+@import "./menus/sidebar-menu.scss";
+
+
+
+.navbar-expand-md .navbar-collapse {
+    justify-content: space-between;
+}
+
+header {
+    height: 100px;
+    font-family: 'Open-Sans', sans-serif;
+}
+
+.account-options:hover {
+    ul#menu-menu-konta {
+        opacity: 1;
+    }
+}
+
+.icon-list {
+    width: 175px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-right: 20px;
+    list-style: none;
+@include max768{
+    &{
+        margin-right:10px;
+    }
+}
+    & li a.icon-item {
+        width: 28px;
+        height: 28px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+    }
+
+
+}
+
+.collapse {
+    @media(min-width: 768px) {
+        & {
+            display: flex;
+        }
+    }
+
+    @media(max-width: 1200px) {
+        & {
+            flex-direction: column;
+        }
+    }
+
+    flex-direction: row;
+}
+
+#navbar {
+    justify-content: space-between;
+    width: 60%;
+}
+
+.navbar-brand img {
+    @include max500{
+        &{
+            max-width: 85px;  
+        }
+    }
+    max-width: 100px;
+    width:100%;
+    height: auto;
+    margin-left: 35px;
+}
+
+
+#menu-main-menu,
+#menu-main-sidebar {
+    li {
+        padding: 0px 10px;
+
+    }
+
+    a {
+        font-size: 1.4rem;
+        color: black;
+
+    }
+}
+
+div#sidebar.show {
+  
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 99;
+}
+
+div#sidebar {
+    position: absolute;
+    right: 0;
+    left:0;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    -webkit-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transform: scale(.8);
+    opacity: 0;
+    pointer-events: none;
+    
+}

@@ -1,0 +1,109 @@
+button[data-bs-toggle="offcanvas"]{
+    align-items: center;
+    height: 25px;
+    width: 35px;
+    i::before{
+        font-size: 25px;
+      
+    }
+
+}
+
+div#offcanvas.offcanvas.offcanvas-start {
+    width: 300px !important;
+    padding: 20px 10px 10px 10px;
+    background: $pink;
+
+    .icon-list {
+        margin-top: 25px;
+    }
+
+    div#cart_container .cart-contents .cart-totals {
+        width: 110px;
+        right: -114px;
+    }
+
+    .offcanvas-header>img {
+        width: 100px;
+        margin: auto;
+
+
+    }
+
+    #menu-main-sidebar {
+        margin-top: 15px;
+        overflow-x: hidden;
+
+        .offcanvas-body {
+            overflow-x: hidden !important;
+        }
+        li {
+            padding: .5em;
+            display: block;
+            transition: height,ease,.9s;
+            a {
+                font-size: 1.6rem;
+            }
+
+            &>ul.dropdown-menu {
+                border: none;
+                position: relative !important;
+               
+                background: $pink;
+
+                li a {
+                    text-transform: capitalize;
+                    font-size: 1.6rem;
+                }
+
+            }
+        }
+    
+    }
+}
+
+.icon-list.sidebar{
+    width: 100px;
+    li a >img:nth-of-type(1){
+        width:21px;
+    }
+    li a >img:nth-of-type(2){
+        width:23px;
+    }
+    @include max500{
+        &{
+            padding:0px;
+            width:60px;
+        }
+    }
+}
+#menu-main-sidebar{
+    .dropdown-menu{
+        height: 0;            
+        overflow-y: hidden;
+        transition: all,ease,.9s;
+        &.show{
+           height: auto ; 
+           transform: translate3d(0px, 2px, 0px)!important;
+           transition: all,ease,.9s;   
+        }
+       } 
+       .dropdown-toggle{
+
+        i::before{
+            transition: all,ease,.9s;
+            position: absolute;
+        }
+    
+    } 
+    .dropdown-toggle.show{
+
+        i::before{
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    } 
+
+
+} 

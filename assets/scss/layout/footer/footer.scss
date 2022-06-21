@@ -1,0 +1,43 @@
+@import "../../abstracts/mixins";
+@import "../../abstracts/variables";
+
+
+
+footer{
+    font-family: 'Raleway';
+    .footer-menu-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer1 .textwidget{
+        background:$grey;
+        padding:46px 28px;
+        b{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        p{
+            font-size: 1.6rem;
+            color: $grey1;
+        }
+        a.btn-link{
+            width:240px;
+            display: flex;
+            height: 45px;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            font-size:1.4rem;
+            color: black;
+            border:1px solid black;
+            font-weight: 700;
+            margin-top:25px;
+        }
+
+    } 
+}
+
+
+
+

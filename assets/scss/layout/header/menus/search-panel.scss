@@ -1,0 +1,95 @@
+@import '../../../abstracts/mixins';
+#sidebar{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+display: flex;
+justify-content: center;
+align-items: center;
+ 
+}
+
+#sidebar .widget-area{
+    margin-top:-100px;
+    background: white;
+    height: auto;
+    width: 100%;
+    max-width: 640px;
+    padding-top: 0px;
+    min-height: 300px;
+    height: auto;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+    & a.close-btn{
+        font-size: 18px;
+        display: flex;
+        height: 25px;
+        width: 25px;
+        top: 15px;
+        position: absolute;
+        right: 15px;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        color:black;
+        cursor: pointer;
+    }
+    form{
+        max-width: 490px;
+        width: 100%;
+        input{
+            padding-left:35px;
+            height: 28px;
+            font-size:1.6rem;
+        }
+        input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+       
+       
+        label{
+            display: none;
+        }
+        button[type='submit']{
+            @include hover-shadow($green,white);
+            color: #fff;
+            background: #000;
+            height: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: .6px;
+            display: inline-block;
+            width: 100px;
+            height: 32px;
+        }
+    }
+    }
+.wp-block-search__inside-wrapper::before{
+    background-image: url(../img/search.svg);
+    content:'';
+    width:20px;
+    height:20px;
+    display:block;
+    background-size:cover;
+    left:7px;
+    position:absolute;
+    top:11px;
+} 
+.wp-block-search__inside-wrapper{
+    position:relative;
+}
+
