@@ -26,13 +26,21 @@
         @content;
     }
 }
+
 @mixin max768 {
     @media(max-width:768px) {
         @content;
     }
 }
+
 @mixin max500 {
     @media(max-width:500px) {
+        @content;
+    }
+}
+
+@mixin min992 {
+    @media(min-width:992px) {
         @content;
     }
 }
