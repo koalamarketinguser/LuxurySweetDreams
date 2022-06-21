@@ -17,7 +17,7 @@
 <body <?php body_class(); ?>>
 <!-- <img class="test-layout" src="wp-content/themes/luxury/assets/img/project.png"/> -->
 <?php wp_body_open(); ?>
-
+<!-- get_template_part('template-parts/header', 'sticky') -->
 <a href="#main" class="visually-hidden-focusable"><?php esc_html_e( 'Skip to main content', 'luxury' ); ?></a>
 <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false">
     <div class="offcanvas-header main-navigation">

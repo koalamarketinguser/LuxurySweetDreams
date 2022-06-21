@@ -1,14 +1,21 @@
 // Webpack Imports
 import * as bootstrap from 'bootstrap';
-import { popup,
-	 	account_menu_display,
-	  	minicart_show,
-	   	dropdown_menu_show,
-	   	arrow_sidebar } from '../assets/js/header/header.js'
+import {
+	popup,
+	account_menu_display,
+	minicart_show,
+	dropdown_menu_show,
+	arrow_sidebar,
+	sticky_header
+} from '../assets/js/header/header.js'
 popup();
 account_menu_display();
 minicart_show();
+
+
 dropdown_menu_show();
+sticky_header();
+
 (function () {
 	'use strict';
 

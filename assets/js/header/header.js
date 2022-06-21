@@ -74,3 +74,17 @@ export function dropdown_menu_show() {
    })
 
 }
+export function sticky_header() {
+   const header = document.querySelector('.main-navigation.navbar ');
+   window.addEventListener('scroll', () => {
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 120 || top == 120) {
+         header.classList.add('sticky');
+      }
+      else {
+         if (header.classList.contains('sticky')) {
+            header.classList.remove('sticky');
+         }
+      }
+   })
+}
