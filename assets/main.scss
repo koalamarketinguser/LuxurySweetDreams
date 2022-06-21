@@ -1,39 +1,58 @@
 // Compile "main.scss" as "css/main.css"
 @font-face {
 	font-family: 'Open-Sans';
-	src: url('../webfonts/maps/OpenSans/OpenSans-Bold.eot') format('eot'),/* IE9 Compat Modes */
-	 url('../webfonts/maps/OpenSans/OpenSans-Bold.woff') format('woff'), /* IE6-IE8 */
-	 url('../webfonts/maps/OpenSans/OpenSans-Bold.ttf') format('ttf'); /* Super Modern Browsers */
+	src: url('../webfonts/maps/OpenSans/OpenSans-Bold.eot') format('eot'),
+		/* IE9 Compat Modes */
+		url('../webfonts/maps/OpenSans/OpenSans-Bold.woff') format('woff'),
+		/* IE6-IE8 */
+		url('../webfonts/maps/OpenSans/OpenSans-Bold.ttf') format('ttf');
+	/* Super Modern Browsers */
 	font-weight: 700;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: 'Open-Sans';
-	src: url('../webfonts/maps/OpenSans/OpenSans-Regular.eot') format('eot'),/* IE9 Compat Modes */
-	 url('../webfonts/maps/OpenSans/OpenSans-Regular.woff') format('woff'), /* IE6-IE8 */
-	 url('../webfonts/maps/OpenSans/OpenSans-Regular.ttf') format('ttf'); /* Super Modern Browsers */
+	src: url('../webfonts/maps/OpenSans/OpenSans-Regular.eot') format('eot'),
+		/* IE9 Compat Modes */
+		url('../webfonts/maps/OpenSans/OpenSans-Regular.woff') format('woff'),
+		/* IE6-IE8 */
+		url('../webfonts/maps/OpenSans/OpenSans-Regular.ttf') format('ttf');
+	/* Super Modern Browsers */
 	font-weight: 400;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: 'Raleway';
-	src: url('../webfonts/maps/Raleway/Raleway-Bold.eot') format('eot'), /* IE9 Compat Modes */
-	 url('../webfonts/maps/Raleway/Raleway-Bold.woff') format('woff'), /* IE6-IE8 */
-	 url('../webfonts/maps/Raleway/Raleway-Bold.ttf') format('ttf'); /* Super Modern Browsers */
+	src: url('../webfonts/maps/Raleway/Raleway-Bold.eot') format('eot'),
+		/* IE9 Compat Modes */
+		url('../webfonts/maps/Raleway/Raleway-Bold.woff') format('woff'),
+		/* IE6-IE8 */
+		url('../webfonts/maps/Raleway/Raleway-Bold.ttf') format('ttf');
+	/* Super Modern Browsers */
 	font-weight: 700;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: 'Raleway';
-	src: url('../webfonts/maps/Raleway/Raleway-Regular.eot') format('eot'), /* IE9 Compat Modes */
-	 url('../webfonts/maps/Raleway/Raleway-Regular.woff') format('woff'), /* IE6-IE8 */
-	 url('../webfonts/maps/Raleway/Raleway-Regular.ttf') format('ttf'); /* Super Modern Browsers */
+	src: url('../webfonts/maps/Raleway/Raleway-Regular.eot') format('eot'),
+		/* IE9 Compat Modes */
+		url('../webfonts/maps/Raleway/Raleway-Regular.woff') format('woff'),
+		/* IE6-IE8 */
+		url('../webfonts/maps/Raleway/Raleway-Regular.ttf') format('ttf');
+	/* Super Modern Browsers */
 	font-weight: 400;
-  }
-  @font-face {
+}
+
+@font-face {
 	font-family: 'Raleway';
-	src: url('../webfonts/maps/Raleway/Raleway-SemiBold.eot') format('eot'), /* IE9 Compat Modes */
-	 url('../webfonts/maps/Raleway/Raleway-SemiBold.woff') format('woff'), /* IE6-IE8 */
-	 url('../webfonts/maps/Raleway/Raleway-SemiBold.ttf') format('ttf'); /* Super Modern Browsers */
+	src: url('../webfonts/maps/Raleway/Raleway-SemiBold.eot') format('eot'),
+		/* IE9 Compat Modes */
+		url('../webfonts/maps/Raleway/Raleway-SemiBold.woff') format('woff'),
+		/* IE6-IE8 */
+		url('../webfonts/maps/Raleway/Raleway-SemiBold.ttf') format('ttf');
+	/* Super Modern Browsers */
 	font-weight: 600;
-  }
+}
 
 
 
@@ -50,7 +69,7 @@
 // 	src: url('./webfonts/maps/Raleway/Raleway-ExtraLight.eot') format('eot'); /* IE9 Compat Modes */
 // 	src: url('./webfonts/maps/Raleway/Raleway-ExtraLight.woff') format('woff'); /* IE6-IE8 */
 // 	src: url('./webfonts/maps/Raleway/Raleway-ExtraLight.ttf') format('ttf'); /* Super Modern Browsers */
-	
+
 // 	src: url('./webfonts/maps/Raleway/Raleway-Regular.eot') format('eot'); /* IE9 Compat Modes */
 // 	src: url('./webfonts/maps/Raleway/Raleway-Regular.woff') format('woff'); /* IE6-IE8 */
 // 	src: url('./webfonts/maps/Raleway/Raleway-Regular.ttf') format('ttf'); /* Super Modern Browsers */
@@ -122,7 +141,7 @@
 @import "./scss/layout/footer/footer.scss";
 @import './scss/abstracts/variables';
 @import './scss/abstracts/mixins';
-
+@import './scss/layout/plugins/sidebar-cart.scss';
 /*
 Fonts
 */
@@ -134,14 +153,15 @@ Fonts
 
 *,
 *::after,
-*::before{
-    margin:0px;
-    padding:0px;
-    box-sizing: inherit;
+*::before {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: inherit;
 }
-html{
-    // size of 1rem 
-    font-size: 62.5%;
+
+html {
+	// size of 1rem 
+	font-size: 62.5%;
 
 }
 
@@ -150,10 +170,11 @@ html{
 img {
 	vertical-align: middle;
 }
+
 body img.test-layout {
-    position:absolute;
-    width:100vw;
-    opacity: .5;
+	position: absolute;
+	width: 100vw;
+	opacity: .5;
 }
 
 /**
@@ -275,6 +296,7 @@ body.admin-bar {
 }
 
 .single {
+
 	.entry-content,
 	.post-navigation,
 	#comments-title {
@@ -299,7 +321,7 @@ body.admin-bar {
 	margin: 0 auto;
 	width: 68.9%;
 
-	> li.comment {
+	>li.comment {
 		margin: 0 0 1.625em;
 		padding: 1.625em;
 		position: relative;
@@ -309,7 +331,7 @@ body.admin-bar {
 		list-style: none;
 		margin-top: $grid-gutter-width;
 
-		> li.comment {
+		>li.comment {
 			border-top: 1px solid $gray-300;
 			padding-top: $grid-gutter-width;
 			position: relative;
@@ -346,6 +368,7 @@ body.admin-bar {
 			@extend .btn-lg;
 		}
 	}
+
 	&.btn-sm {
 		.wp-block-button__link {
 			@extend .btn-sm;
@@ -362,6 +385,7 @@ body.admin-bar {
 // Table
 
 .wp-block-table {
+
 	td,
 	th {
 		border: inherit;
@@ -376,6 +400,7 @@ body.admin-bar {
 
 .wp-block-image,
 .wp-block-media-text__media {
+
 	img,
 	video {
 		height: auto;
@@ -392,5 +417,3 @@ body.admin-bar {
 		margin-top: 60px;
 	}
 }
-
-

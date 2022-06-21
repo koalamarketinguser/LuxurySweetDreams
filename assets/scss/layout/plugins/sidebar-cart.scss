@@ -1,0 +1,132 @@
+/* cart sidebare toggler*/
+.xoo-wsc-icon-basket1::before {
+    content: url('../img/shopping-bag.svg');
+    height: 20px;
+}
+
+.xoo-wsc-basket {
+    padding: 9px 15px;
+}
+
+.xoo-wsc-items-count {
+    background-color: #727F5B
+}
+
+.xoo-wsc-icon-bag2::before {
+    content: url('../img/shopping-bag.svg');
+}
+
+.xoo-wscb-icon {
+    font-size: 35px;
+}
+
+.xoo-wsc-sm-left {
+    font-weight: 400;
+}
+
+.xoo-wsc-container {
+    max-width: 370px;
+    width: 320px;
+    background-color: $pink;
+}
+
+.xoo-wsc-ft-amt-subtotal {
+    margin-left: 0px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    display: flex;
+}
+
+.xoo-wsc-header {
+    background-color: transparent
+}
+
+.xoo-wsc-empty-cart .button.btn {
+    display: none;
+}
+
+.xoo-wsc-icon-trash::before {
+    content: url(../img/cart.svg);
+}
+
+.xoo-wsc-product {
+    border-bottom: 2px solid #727F5B;
+    padding: 30px 0px;
+    margin: 0px 15px;
+}
+
+
+.xoo-wsc-body,
+.xoo-wsc-products,
+.xoo-wsc-footer {
+    background-color: $pink;
+}
+
+.xoo-wsc-footer {
+    color: #000000;
+    padding: 10px 20px 50px 10px;
+}
+
+.xoo-wsc-ft-buttons-cont a {
+    margin-bottom: 10px;
+}
+
+a.xoo-wsc-ft-btn {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 0;
+    align-items: center;
+    justify-content: center;
+    @include hover-shadow($green, black, black);
+    width: 240px;
+    margin: 0px auto;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 14px !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+
+    &.xoo-wsc-ft-btn-checkout {
+        background-color: black;
+
+
+        @include hover-shadow(black, black, white);
+
+    }
+
+    &.xoo-wsc-ft-btn-cart {
+        background-color: transparent;
+        color: black;
+    }
+
+}
+
+.xoo-wsc-ft-buttons-cont {
+    margin-top: 35px;
+}
+
+.xoo-wsc-ft-totals {
+    border-top: 1px solid black;
+}
+
+.xoo-wsc-products .xoo-wsc-sum-col {
+    .xoo-wsc-sm-left {
+        color: black;
+
+        a {
+            text-decoration: none;
+            font-size: 14px;
+
+            &:hover {
+                color: black
+            }
+        }
+
+
+    }
+
+    .xoo-wsc-sm-right {
+        align-items: center;
+        padding: 0px;
+    }
+}

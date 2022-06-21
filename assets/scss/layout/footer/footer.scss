@@ -34,7 +34,7 @@ footer {
         }
 
         a.btn-link {
-            @include hover-shadow($pink, black);
+            @include hover-shadow($pink, $pink, black);
             max-width: 240px;
             display: flex;
             height: 45px;

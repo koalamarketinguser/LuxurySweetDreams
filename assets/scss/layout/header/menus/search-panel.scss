@@ -1,19 +1,20 @@
 @import '../../../abstracts/mixins';
-#sidebar{
+
+#sidebar {
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,.6);
-display: flex;
-justify-content: center;
-align-items: center;
- 
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-#sidebar .widget-area{
-    margin-top:-100px;
+#sidebar .widget-area {
+    margin-top: -100px;
     background: white;
     height: auto;
     width: 100%;
@@ -26,8 +27,9 @@ align-items: center;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color:black;
-    & a.close-btn{
+    color: black;
+
+    & a.close-btn {
         font-size: 18px;
         display: flex;
         height: 25px;
@@ -41,28 +43,32 @@ align-items: center;
         border-radius: 20px;
         font-weight: 700;
         text-decoration: none;
-        color:black;
+        color: black;
         cursor: pointer;
     }
-    form{
+
+    form {
         max-width: 490px;
         width: 100%;
-        input{
-            padding-left:35px;
+
+        input {
+            padding-left: 35px;
             height: 28px;
-            font-size:1.6rem;
+            font-size: 1.6rem;
         }
+
         input:focus {
             outline: none;
             box-shadow: none;
         }
-       
-       
-        label{
+
+
+        label {
             display: none;
         }
-        button[type='submit']{
-            @include hover-shadow($green,white);
+
+        button[type='submit'] {
+            @include hover-shadow($green, $green, white);
             color: #fff;
             background: #000;
             height: 100%;
@@ -77,19 +83,20 @@ align-items: center;
             height: 32px;
         }
     }
-    }
-.wp-block-search__inside-wrapper::before{
-    background-image: url(../img/search.svg);
-    content:'';
-    width:20px;
-    height:20px;
-    display:block;
-    background-size:cover;
-    left:7px;
-    position:absolute;
-    top:11px;
-} 
-.wp-block-search__inside-wrapper{
-    position:relative;
 }
 
+.wp-block-search__inside-wrapper::before {
+    background-image: url(../img/search.svg);
+    content: '';
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: cover;
+    left: 7px;
+    position: absolute;
+    top: 11px;
+}
+
+.wp-block-search__inside-wrapper {
+    position: relative;
+}
