@@ -1,0 +1,756 @@
+body.home.theme-luxury{
+
+h1.entry-title{
+    display: none;
+}
+
+.owl-carousel.owl-theme.luxury-slider{
+   .slide-inner{
+    height:720px;
+   } 
+}
+.container-fluid.page-layout{
+    @include  min768_max1350{
+        &{
+            margin-top:100px;
+        }
+    }
+}
+@include  max768{
+    &{
+        margin-top:20px;
+    }
+}
+// Home Section 1
+#homepage-section1{
+    @include min1500{
+        padding:50px 150px;
+    }
+   @include max1500{
+    padding:50px 20px;
+   }
+   @include max768{
+    padding:20px 20px;
+}
+    .inner-row{
+        .wpb_text_column.wpb_content_element{
+            margin-bottom:0px;
+            .wpb_wrapper >div{
+                @include max768{
+                    margin:30px 0px;
+                }
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p:nth-of-type(2){
+                    width: 35%;
+                    @include max600{
+                        &{
+                            width: 50%;
+                        }
+                    }
+                    font-weight: 700;
+                    text-align: center;
+                }
+            }
+
+        } 
+
+    }
+
+}
+//Home Icons Section
+
+#homepage-icons-section{
+    padding: 70px;
+    @include max768{
+        &{
+            padding: 40px;
+        }
+    }   
+    .wpb_text_column {
+        @include max768{
+            &{
+                margin:10px 0px;
+            }
+        }
+        margin:0px;
+       .wpb_wrapper{
+        display: flex;
+    justify-content: center;
+    p.text{
+        font-size:1.4rem;
+        font-weight:700;
+    }
+       } 
+    }
+}
+// Home Section 2 
+
+#homepage-section2{
+    .underline-link{
+        display: flex;
+        width:29px;
+        height: 29px;
+        border-radius:20px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border:1px solid black;
+        margin-top:15px;
+        cursor: pointer;
+        i{
+            font-size:2rem;
+            color:black;
+        }
+    }
+ 
+    .custom-image11{
+        max-width: 690px;
+        @include max768{
+            max-width: 470px;
+        }
+        height: 704px;
+        @include max768{
+            &{
+                height: 635px;
+                max-width: 470px;
+                margin: auto;
+              
+                
+    
+                &>.wpb_wrapper {
+                    height:100%;
+                    .vc_single_image-wrapper{
+                        height:100%;
+                    img{
+                        height:100%;
+                        object-fit: cover;
+                    }
+                    }
+                }
+            }
+        }
+       
+ }
+
+    div.arrow-block{
+        margin-bottom:15px;
+        h1{
+        @include min400_max768{
+            &{
+                max-width: 100%;  
+              
+            }
+        }
+         max-width: 300px;
+         width: 100%;
+        }
+        .underline-separator{
+            display: block;
+            background: $pink;
+            height: 3px;
+            width:300px;
+            @include max768{
+                &{
+                    width: 40%; 
+                }
+            }
+            @include max500{
+                &{
+                    width: 60%; 
+                }
+            }
+            margin-top: 15px;
+        }
+      
+     }
+    .custom-column1{
+        .vc_column-inner{
+            background-repeat: no-repeat;
+            background-position-x: 19%;
+            background-position-y: 60%;
+            @include min1200_max1500{
+                background-position-x: 0%;
+                background-position-y: 10%;
+            }
+            @include min768_max1200{
+                background-position-x: 100%;
+                background-position-y: 5%;
+            }
+            @include max768{
+                background-position-x: 480px;
+                background-position-y: 60%;
+            }
+        }
+        .vc_column-inner:nth-of-type(1){
+            &>.wpb_wrapper{
+                @include min1500{
+                    &{
+                        padding-left: 200px;
+                    }
+                }
+                @include min1200_max1500{
+                    &{
+                        padding-left: 100px;
+                    }
+                }
+                
+        
+            }
+
+        }
+    }
+    .custom-column1{
+        .underline-link{
+            @include hover-shadow($pink, black, black); 
+        }
+    }
+    .custom-column2{
+.underline-link{
+    margin:0px;
+    @include hover-shadow($green, black, black); 
+}
+@include max768{
+    & .underline-separator{
+        margin-bottom:25px;
+    }
+}
+@include max500{
+    & .underline-separator{
+        margin-bottom:0;
+    }
+}
+
+.arrow-link-container2{
+    width: 250px;
+    display: flex;
+    justify-content: flex-end;
+    @include max768{
+        margin-bottom:0px;
+    }
+    @include max400{
+        justify-content: flex-start;
+    }
+}
+        
+ .custom-image2{
+    height: 635px;
+    max-width: 470px;
+    margin: 0px;
+    margin-bottom: 30px;
+    @include max768{
+        &{
+            margin: 30px  auto;
+        }
+    }
+    &>.wpb_wrapper {
+        height:100%;
+        .vc_single_image-wrapper{
+            height:100%;
+        img{
+            height:100%;
+            object-fit: cover;
+        }
+        }
+    }
+}
+
+    .vc_column-inner{
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 50%;
+        
+        @include min768_max1200{
+            background-position-x: 100%;
+            background-position-y: 100%;
+        }
+        @include max768{
+            background-position-x: 3%;
+            background-position-y: 100%;
+        }
+    }
+     @include min400_max768{
+        &{
+            .wpb_wrapper{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-end; 
+            }
+
+        }
+     }
+    }
+    #arrow-block1{  
+        width:100%;
+        @include min1000{
+            &{
+                width:50%;
+            }
+        }    
+    }
+    #arrow-block2{
+        max-width: 515px;
+        @include min400_max768{
+            &{
+                max-width: 100%;
+                width:100%;
+            h1{
+                text-align: right;
+            }
+            }
+        }
+        display: flex;
+        justify-content: flex-end;
+   
+      
+    }
+    @include max1000{
+        .arrow-block{
+            .wpb_wrapper{
+                width:100%;
+                .underline-separator{
+                    width:70%;
+                }
+            }
+        }
+    }
+    @include min400_max768{
+        .arrow-block{
+            .wpb_wrapper{
+                width:60%;
+                .underline-separator{
+                    width:70%;
+                }
+            }
+        }
+    }
+    @include max768{
+        div.custom-column2 .vc_column-inner{
+            padding:20px!important;
+        }
+    }
+  
+    
+    
+  
+}
+// Home Section 3
+#homepage-section3{
+    background-repeat: no-repeat!important;
+    background-position-y:90%!important;
+    background-position-x:3%!important;
+    @include max768{
+        &{
+            padding-top:40px;
+        }
+    }
+    padding: 88px 0px;
+    .wpb_text_column {
+        @include max768{
+            &{
+                padding:0px 25px;
+            }
+        }
+        h1{
+            font-weight: 700;
+            margin-bottom: 42px;
+        }
+    }
+.buttons-container{
+    text-align: center; 
+
+    .wpb_wrapper > div {
+        margin: 10px!important;
+    }
+   .main-button{
+ 
+    &:nth-child(1) a{
+        @include hover-shadow($pink, black, black); 
+    
+       }
+    &:nth-child(2) a{
+    @include hover-shadow($green, black, black); 
+
+    }
+   
+   }
+}
+}
+}
+
+// Home Section 4
+
+#homepage-section4{
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-size: inherit;
+    @include min768_max1200{
+        background-position-x: 50%;
+    }
+    @include max768{
+        background-position-x: 0%;
+    }
+    .custom-outer-container{
+        @include min768_max1200 {
+            &{
+                width:100%;
+            }
+        }
+     
+    }
+    .custom-column1{
+        height: 100%;
+        .vc_column-inner{
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;            
+            position: relative;
+            @include max1350 {
+                &{
+                    min-height: 330px; 
+                }
+            }
+            @include max768{
+                &{
+                    width: 90%;
+                    padding:0px;
+                    margin: 0px auto; 
+                    min-height: auto; 
+                }
+            }
+            &>.wpb_wrapper{
+                h1{
+                    font-weight:700;
+                }
+                .underline-separator{
+                    display: block;
+                    background: $pink;
+                    height: 3px;
+                    margin:40px 0px;
+                    width:60%;
+                }
+                @include min1350{
+                    &{
+                        position: absolute;
+                        right: 0;
+                        width: 50%;
+                    }
+                }
+                z-index: 999;
+            }
+             
+            }
+        }
+    .custom-column2 {
+        position:relative;
+        .vc_column-inner{
+            @include min1350{
+                &{
+                    position: absolute;
+                    left: -75px;
+                }
+            }
+            
+            img{
+                @include min768_max1200 {
+                    &{
+                        height: 330px;
+                    }
+                }
+                @include min1350{
+                    &{
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+// Home Section 5
+ 
+#homepage-section5{
+    margin-top:100px;
+    background-repeat: no-repeat;
+    background-position-x: -25px;
+    background-position-y: 83px;
+    .wpb_text_column{
+        margin-bottom:100px;
+        @include max1200{
+            &{
+                margin-bottom:40px;
+            }
+        }
+       
+    }
+    .main-button {
+        width:100%;
+        a{
+            @include hover-shadow($pink, black, black); 
+            margin:50px auto 0px auto;
+            max-width:240px;
+            width:100%;
+        }
+    }
+    }
+
+// Home Section 6
+
+#homepage-section6{
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    background-position-x: 102%;
+    background-size: inherit;
+    @include min768_max1200{
+        background-position-x: 50%;
+    }
+    @include max768{
+        background-position-x: 0%;
+    }
+    .custom-outer-container{
+        @include min768_max1200 {
+            &{
+                width:100%;
+            }
+        }
+     
+    }
+    .custom-column1 {
+        height: 100%;
+        .vc_column-inner{
+            background-repeat: no-repeat!important;
+            background-position-y: 45%;
+            background-position-x: 35%;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;            
+            position: relative;
+            @include max1350 {
+                &{
+                    min-height: 330px; 
+                }
+            }
+            @include max768{
+                &{
+                    width: 90%;
+                    padding:0px;
+                    margin: 0px auto; 
+                    min-height: auto; 
+                }
+            }
+            &>.wpb_wrapper{
+                width:100%;
+                @include min1350{
+                    &{
+                        position: absolute;
+                        right: -50px;
+                    }
+                }
+                
+                img{
+                    height: 100%;
+                    @include min768_max1200 {
+                        &{
+                            height: 330px;
+                        }
+                    }
+                    @include min1350{
+                        &{
+                            height: 500px;
+                        }
+                    }
+                }
+            }
+             
+            }
+    }
+  
+    .custom-column2{
+      
+        position: relative;
+        .vc_column-inner{
+           
+         
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;            
+            position: relative;
+            @include max1350 {
+                &{
+                    min-height: 330px; 
+                }
+            }
+            @include max768{
+                &{
+                    width: 90%;
+                    padding:0px;
+                    margin: 0px auto; 
+                    min-height: auto; 
+                }
+            }
+            & > .wpb_wrapper{
+                h1{
+                    font-weight:700;
+                }
+                .underline-separator{
+                    display: block;
+                    background: $pink;
+                    height: 3px;
+                    margin:40px 0px;
+                    width:60%;
+                }
+                @include min1350{
+                    &{
+                        position: absolute;
+                       
+                        width: 50%;
+                    }
+                }
+                z-index: 999;
+            }
+             
+            }
+       
+        }
+   
+}
+
+// Home Section 7
+
+#homepage-section7{
+    .products-container {
+        margin:35px 0px;
+    }
+    .wpb_text_column{
+        margin-bottom:100px;
+        @include max1200{
+            &{
+                margin-bottom:40px;
+            }
+        }
+       
+    }
+    .main-button{
+        width:100%;
+        a{
+            @include hover-shadow($green, black, white); 
+            margin:auto;
+            max-width:240px;
+            width:100%;
+        }
+    } 
+}
+
+// Home Section 8
+div#homepage-section8{
+    background-repeat: no-repeat!important;
+    background-size: inherit!important;
+    @include min1200{
+        background-position-y: center!important;
+        background-position-x: 100%!important;
+    }
+    @include max1200{
+        background-position-y: bottom!important;
+        background-position-x: -67px!important;
+    }
+    @include max768{
+        background-image: none!important;
+
+    }
+    padding:88px 25px;
+    h1{
+        font-weight: 700;
+        margin-bottom: 42px;
+    }
+    p{
+        color:white;
+    }
+}
+
+
+// Home Section 9
+div#homepage-section9{
+    @include max1200{
+        &{
+            display: flex;
+    justify-content: center;
+        }
+        .testimonial-outer-container{
+            width: 85%;
+            margin:auto;
+        
+        } 
+     }
+   
+    .additional-columns{
+        @include max1200{
+           &{
+            display: none;
+           } 
+        }
+    }
+}
+
+// Home Section 10
+#homepage-section10{
+background-repeat: no-repeat;
+background-position-y: 50%;
+background-position-x: -1%;
+.custom-column1{
+        .vc_column-inner{
+            width: 50%;
+            margin-left: auto;
+            margin-top: 15%;
+            margin-right: 50px; 
+            @include max1300{
+                width: 80%;
+            }
+            .underline-separator{
+                display: block;
+                background: $pink;
+                height: 3px;
+                margin-bottom:30px;
+                width:300px;
+                @include max768{
+                    &{
+                        width: 40%; 
+                    }
+                }
+                @include max500{
+                    &{
+                        width: 60%; 
+                    }
+                }
+                margin-top: 15px;
+            }
+        }
+}
+.custom-column2{
+
+    .custom-image{
+        height: 635px;
+        max-width: 470px;
+        margin: 0px;
+        margin-bottom: 30px;
+        @include max768{
+            &{
+                margin: 30px  auto;
+            }
+        }
+        &>.wpb_wrapper {
+            height:100%;
+            .vc_single_image-wrapper{
+                height:100%;
+            img{
+                height:100%;
+                object-fit: cover;
+            }
+            }
+        }
+    }
+}
+}

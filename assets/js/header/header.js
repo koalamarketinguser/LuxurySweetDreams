@@ -1,10 +1,14 @@
 export function popup() {
-   const searchBtn = document.querySelector('#search-btn a');
+
+   const searchBtns = document.querySelectorAll('.search-btn a');
    const sideBar = document.querySelector('#sidebar');
-   const widgetArea = document.querySelector('#widget-area a.close-btn');
-   searchBtn.addEventListener('click', () => {
-      sideBar.classList.toggle('show');
+   const widgetArea = document.querySelector('#search-panel a.search-close');
+   searchBtns.forEach((searchBtn)=>{
+      searchBtn.addEventListener('click', () => {
+         sideBar.classList.toggle('show');
+      })
    })
+  
    widgetArea.addEventListener('click', () => {
       sideBar.classList.remove('show');
    })
@@ -26,6 +30,7 @@ export function account_menu_display() {
 
    })
 }
+
 
 export function minicart_show() {
    (function ($) {

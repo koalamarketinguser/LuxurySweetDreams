@@ -139,9 +139,15 @@
 // 6. Luxury Theme Sass imports
 @import "./scss/layout/header/header.scss";
 @import "./scss/layout/footer/footer.scss";
+@import "./scss/layout/layout.scss";
+@import "./scss/layout/elements/form.scss";
+@import "./scss/layout/elements/buttons.scss";
 @import './scss/abstracts/variables';
 @import './scss/abstracts/mixins';
 @import './scss/layout/plugins/sidebar-cart.scss';
+@import './scss/layout/plugins/woocommerce/archive-product.scss';
+@import './scss/pages/homepage.scss';
+@import './scss/pages/about.scss';
 /*
 Fonts
 */
@@ -156,7 +162,8 @@ Fonts
 *::before {
 	margin: 0px;
 	padding: 0px;
-	box-sizing: inherit;
+	box-sizing: border-box;
+
 }
 
 html {
@@ -164,8 +171,29 @@ html {
 	font-size: 62.5%;
 
 }
+html, body 
+{
+    max-width: 100%;
+    overflow-x: hidden;
+ }
+ body.page{
+	font-family: 'Raleway';
+ }
 
-
+h1{
+	font-family: "Raleway";
+	font-size:700;
+	font-size:3.0rem;
+	@include min768{
+		font-size:3.4rem;
+	}
+}
+p{
+	font-family: "Raleway";
+	font-size: 1.6rem;
+	font-weight:400;
+	line-height: 2.4rem;
+}
 
 img {
 	vertical-align: middle;
@@ -176,7 +204,9 @@ body img.test-layout {
 	width: 100vw;
 	opacity: .5;
 }
-
+h1.entry-title{
+	display: none;
+}
 /**
  * WordPress customization
  */
@@ -216,6 +246,7 @@ body.admin-bar {
 		height: auto;
 	}
 }
+
 
 /* Header */
 
@@ -289,6 +320,7 @@ body.admin-bar {
 		background-color: $gray-100;
 	}
 }
+
 
 .entry-meta {
 	font-size: small;
@@ -412,8 +444,4 @@ body.admin-bar {
  * Responsive Design using "mixins/_breakpoints.scss"
  */
 
-@media (max-width: breakpoint-max(sm)) {
-	#sidebar {
-		margin-top: 60px;
-	}
-}
+

@@ -43,6 +43,13 @@ if ( ! function_exists( 'luxury_setup_theme' ) ) :
 		load_theme_textdomain( 'luxury', get_template_directory() . '/languages' );
 
 		// Theme Support.
+		add_theme_support( 'custom-logo', array(
+			'height'      => 100,
+			'width'       => 400,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+		) );
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'post-thumbnails' );
@@ -549,11 +556,12 @@ add_action( 'after_setup_theme', function(){
 
 
 function wp_bootstrap_starter_widgets_init() {
-    register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'wp-bootstrap-starter' ),
-        'id'            => 'sidebar-1',
+
+	register_sidebar( array(
+        'name'          => esc_html__( 'Search Panel', 'wp-bootstrap-starter' ),
+        'id'            => 'search-panel',
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'before_widget' => '<section id="search-panel" class="widget widget-area %2$s"><a href="#" class="search-close"><i class="fa-solid fa-circle-xmark"></i></a>',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
@@ -679,28 +687,76 @@ function diwp_menu_shortcode(){
 
 
 
-	//footer widget contact details
+//footer widget contact details
 	add_shortcode('widget2', 'diwp_menu_shortcode2');
-	function diwp_menu_shortcode2(){
+	if ( ! function_exists( 'diwp_menu_shortcode2' ) ) {
+		function diwp_menu_shortcode2(){
 	
-		$v1='';
-	
-		if(ICL_LANGUAGE_CODE=='pl'){
-			$v1 ='Dane kontaktowe';
-		}
-		if(ICL_LANGUAGE_CODE=='en'){
-			$v1 ='Contact details';
+			$v1='';
+		
+			if(ICL_LANGUAGE_CODE=='pl'){
+				$v1 ='Dane kontaktowe';
 			}
-			if(ICL_LANGUAGE_CODE=='de'){
-				$v1 ='Kontaktdaten';
+			if(ICL_LANGUAGE_CODE=='en'){
+				$v1 ='Contact details';
 				}
-		  if(ICL_LANGUAGE_CODE=='ja'){
-				$v1 ='連絡先の詳細';
+				if(ICL_LANGUAGE_CODE=='de'){
+					$v1 ='Kontaktdaten';
+					}
+			  if(ICL_LANGUAGE_CODE=='ja'){
+					$v1 ='連絡先の詳細';
+					}
+			echo '<section id="block-34" class="widget widget_block"><div class="wp-block-group"><div class="wp-block-group__inner-container">
+			<div class="wp-block-columns"><div class="wp-block-column" style="flex-basis:100%"><h3 class="widget-title">'.$v1.'</h3>
+			<div class="footer-contact-container"><p class="mb-3"> Amidown Dawid Mielczarski</p>
+			<p class="mb-3"> ul. Szyszyńskie Holendry 308 62-561 Ślesin woj. wielkopolskie</p>
+			<p><a href="tel:+48 667 887 227"> <span>+48 667 887 227<br></span></a><br>
+			<a href="mailto: office@luxurysweetdreams.com"> <span>office@luxurysweetdreams.com</span></a></p></div></div></div></div></div></section>';
+			}
+
+	}
+
+
+	/**********////Home Page Functions/////**********/
+	
+	//GENERAL PRICE TEXT
+
+		add_filter('woocommerce_get_price_html', 'custom_price', 99, 2 );
+
+		if ( ! function_exists( 'custom_price' ) ) {
+			function custom_price( $price ) {
+			
+				$word='';
+			
+				if(ICL_LANGUAGE_CODE=='pl'){
+					$word ='od';
 				}
-		echo '<section id="block-34" class="widget widget_block"><div class="wp-block-group"><div class="wp-block-group__inner-container">
-		<div class="wp-block-columns"><div class="wp-block-column" style="flex-basis:100%"><h3 class="widget-title">'.$v1.'</h3>
-		<div class="footer-contact-container"><p class="mb-3"> Amidown Dawid Mielczarski</p>
-		<p class="mb-3"> ul. Szyszyńskie Holendry 308 62-561 Ślesin woj. wielkopolskie</p>
-		<p><a href="tel:+48 667 887 227"> <span>+48 667 887 227<br></span></a><br>
-		<a href="mailto: office@luxurysweetdreams.com"> <span>office@luxurysweetdreams.com</span></a></p></div></div></div></div></div></section>';
+				if(ICL_LANGUAGE_CODE=='en'){
+					$word ='from';
+					}
+					if(ICL_LANGUAGE_CODE=='de'){
+						$word ='aus';
+						}
+				if(ICL_LANGUAGE_CODE=='ja'){
+					$word ='から';
+						}
+					
+					return $word .' '. $price;
+			}
+	
 		}
+	
+	
+		// remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+		// add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+		
+		// /**
+		// * WooCommerce Loop Product Thumbs
+		// **/
+		// if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
+		// 	function woocommerce_template_loop_product_thumbnail() {
+		// 		echo "<div class='wc-img-wrapper custom-loop-wrapper'>";
+		// 		echo woocommerce_get_product_thumbnail();
+		// 		echo "</div>";
+		// 	}
+		// }

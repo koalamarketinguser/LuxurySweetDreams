@@ -8,7 +8,11 @@ footer {
     padding-top: 50px;
     border-top: 4px solid $grey;
     margin-top: 100px;
-
+    @include max768{
+        & .container{
+            max-width: 100%;;
+        }
+    }
     .footer-menu-container {
         display: flex;
         flex-direction: column;

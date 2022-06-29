@@ -3,20 +3,46 @@
 }
 
 .main-navigation {
-    position: fixed;
+ 
     top: 0;
     left: 0;
     right: 0;
-    height: 70px;
-    padding: 50px 140px 0px 140px;
+    height: 85px;
+    max-width: 100%;
+    justify-content: center;
     background: transparent;
     transition: all .3s;
     z-index: 99;
 
+    .offcanvas-header.main-navigation{
+    position:relative;
+
+    }
+    // @include max768 {
+    //     &{
+    //         padding: 0px 20px; 
+    //     }
+    // }
+
     &.sticky {
+        position: fixed;
         background-color: rgba(255, 255, 255, 1);
         box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
-        padding: 20px 80px 20px 80px;
+        padding:  20px 130px;
+        z-index: 99999;
+        @include  max768{
+            padding: 6px 80px;   
+        }
+        @include  max600{
+            padding:0px;   
+        }
+        @include  min768_max1350{
+            &{
+                .navbar-brand, .icon-list{
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -65,21 +91,18 @@
     background-color: #000;
 }
 
-.main-navigation .navbar-collapse {
-    @include min768_max1200 {
-        ul {
-            margin-top: 25px;
-        }
-    }
 
-}
+
 
 .main-navigation .container {
     margin: 40px auto;
 
-    @include max768 {
+
+    @include max1000 {
         & {
-            max-width: 92%;
+            width: 100%  !important;;
+            margin:0px;
+            max-width: 100%;
 
 
         }

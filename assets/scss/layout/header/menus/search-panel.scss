@@ -14,8 +14,10 @@
 }
 
 #sidebar .widget-area {
+    position:relative;
     margin-top: -100px;
     background: white;
+    opacity: 1;
     height: auto;
     width: 100%;
     max-width: 640px;
@@ -28,24 +30,21 @@
     justify-content: center;
     text-decoration: none;
     color: black;
-
-    & a.close-btn {
-        font-size: 18px;
-        display: flex;
-        height: 25px;
-        width: 25px;
-        top: 15px;
-        position: absolute;
-        right: 15px;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid black;
-        border-radius: 20px;
-        font-weight: 700;
-        text-decoration: none;
-        color: black;
-        cursor: pointer;
+    padding: 0px 25px;
+    @include max768{
+        &{
+            margin: 0px 30px;
+        }
     }
+
+    & a.search-close {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        font-size: 23px;
+        color: black;
+    }
+    
 
     form {
         max-width: 490px;
@@ -53,7 +52,7 @@
 
         input {
             padding-left: 35px;
-            height: 28px;
+            height: 50px;
             font-size: 1.6rem;
         }
 
@@ -80,7 +79,7 @@
             letter-spacing: .6px;
             display: inline-block;
             width: 100px;
-            height: 32px;
+            height: 50px;
         }
     }
 }
@@ -99,4 +98,20 @@
 
 .wp-block-search__inside-wrapper {
     position: relative;
+    display: flex;
+    align-items: center;
+    @include max600{
+        &{
+        display: flex;
+        flex-direction: column;
+        input{
+            width:100%;
+        }
+        button{
+            max-width: 200px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        }
+        }
 }

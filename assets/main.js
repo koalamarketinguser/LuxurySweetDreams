@@ -13,6 +13,7 @@ account_menu_display();
 minicart_show();
 
 
+
 dropdown_menu_show();
 sticky_header();
 
@@ -38,10 +39,6 @@ sticky_header();
 		});
 	});
 })();
-
-
-
-
 
 
 

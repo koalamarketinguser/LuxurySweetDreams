@@ -1,0 +1,73 @@
+#banner-section{
+    
+    min-height: 450px;
+    background-size: cover;
+    background-position-y: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top:100px;
+    h4{
+        font-size: 20px;
+        color:white;
+        opacity: .8;
+        font-weight: 300;
+        margin-bottom:30px;
+        
+    }
+    h1{
+        font-weight:500;
+        font-size:50px;
+        color:white;
+    }
+
+}
+#about-section1{
+    .underline-link{
+        display: flex;
+        width:29px;
+        height: 29px;
+        border-radius:20px;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        border:1px solid black;
+        margin-top:15px;
+        cursor: pointer;
+        i{
+            font-size:2rem;
+            color:black;
+        }
+    }
+    .underline-separator{
+        display: block;
+        background: $pink;
+        height: 3px;
+        width:300px;
+        @include max768{
+            &{
+                width: 40%; 
+            }
+        }
+        @include max500{
+            &{
+                width: 60%; 
+            }
+        }
+        margin-top: 15px;
+    }
+    .custom-column1{
+        .wpb_wrapper{
+           width:60%;
+           margin-left:auto; 
+           margin-right:50px;
+           margin-top:50px;
+        }
+    }
+    .custom-column1{
+        img{
+           height:700px;
+    max-width: 600px;
+    margin-right: auto;
+        }
+    }
+}

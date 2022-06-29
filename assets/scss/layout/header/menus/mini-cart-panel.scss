@@ -47,6 +47,7 @@
         overflow-y: auto!important;
         overflow-x: hidden!important;
         height: auto;
+        padding-left: 0px!important;
     overflow: auto;
  }
 
@@ -80,14 +81,15 @@
     & > div{
         height: 100%;
     }
+    
     ul.product_list_widget li {
-        padding:15px 20px 15px 0px;
+        padding:15px 0px 15px 0px;
         width:95%;
         margin:auto;
         border-bottom:2px solid $green;
         display: flex;
         flex-direction:column;
-        flex-wrap: wrap;
+       flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
         font-family: 'Raleway' , sans-serif;
@@ -105,6 +107,7 @@
 
         img{
             width:87px;
+            height:auto;
             margin:10px 15px;
         }
            
@@ -184,7 +187,7 @@
 div.woocommerce.widget_shopping_cart .cart_list li a.remove{
     color:transparent!important;
     position:relative;
-    margin-right:10px;
+
     &::before{
         content:url(../img/cart.svg);
         background:$pink;

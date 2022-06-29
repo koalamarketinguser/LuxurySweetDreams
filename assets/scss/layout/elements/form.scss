@@ -1,0 +1,49 @@
+div[role='form']{
+ 
+    margin-top:30px;
+    input{
+        width:100%;
+        height:50px;
+        border-radius:0px;
+        border:1px solid black;
+        &::placeholder{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight:700;
+
+        }
+    }
+    .d-flex{
+        span{
+            display: flex;
+            align-items:center;
+            &.your-check{
+                margin-right:5px;
+            }
+           
+        }
+    }
+    input[type='submit']{
+        @include min768{
+            margin-left: auto;
+        }
+   
+        max-width: 240px;
+        width: 100%;
+        display: block;
+        background:white;
+        text-transform: uppercase;
+        font-weight:700!important;
+        font-size:1.4rem;
+        @include  hover-shadow($pink, black, black)
+    }
+}
+     
+     
+
+
+
+
+
+
+
